@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QLSPWebserver">
+  <DataContextMoniker Name="/QLSPWebserverDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ecc3f66b-a21d-4b97-90f4-808604845e71" absoluteBounds="3.5, 0.875, 2, 1.7708968098958333">
+      <DataClassMoniker Name="/QLSPWebserverDataContext/SanPham" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3975b56c-c0a2-49dd-acfd-d02b5a011993" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e158bf73-756e-4263-81ef-ca89732cc8e4" absoluteBounds="0.75, 1.25, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/QLSPWebserverDataContext/DanhMuc" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ad948735-c64b-47d9-912f-bb6425603eb2" absoluteBounds="0.765, 1.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.84699625651042); (3.5 : 1.84699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QLSPWebserverDataContext/DanhMuc/DanhMuc_SanPham" />
+      <nodes>
+        <classShapeMoniker Id="e158bf73-756e-4263-81ef-ca89732cc8e4" />
+        <classShapeMoniker Id="ecc3f66b-a21d-4b97-90f4-808604845e71" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

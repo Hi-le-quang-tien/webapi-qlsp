@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLSPWebServer" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=quangtien;Initial Catalog=QLSPWebServer;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QLSPWebServerConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.SanPham" Member="SanPhams">
+    <Type Name="SanPham">
+      <Column Name="MaSP" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenSP" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DonGia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MaDM" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="DanhMuc_SanPham" Member="DanhMuc" ThisKey="MaDM" OtherKey="MaDM" Type="DanhMuc" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DanhMuc" Member="DanhMucs">
+    <Type Name="DanhMuc">
+      <Column Name="MaDM" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenDM" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Association Name="DanhMuc_SanPham" Member="SanPhams" ThisKey="MaDM" OtherKey="MaDM" Type="SanPham" />
+    </Type>
+  </Table>
+</Database>
